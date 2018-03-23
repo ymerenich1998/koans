@@ -72,6 +72,15 @@ class AboutClasses < Neo::Koan
     assert_equal "Fido", fido.name
   end
 
+
+#My_test
+  def test_you_can_create_accessor_methods_to_return_instance_variables2
+    fido = Dog3.new
+    fido.set_name("Kevin")
+
+    assert_equal "Kevin", fido.name
+  end
+
   # ------------------------------------------------------------------
 
   class Dog4

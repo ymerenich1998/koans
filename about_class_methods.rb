@@ -83,6 +83,9 @@ class AboutClassMethods < Neo::Koan
     fido.name = "Fido"
     assert_equal "Fido", fido.name
     assert_equal nil, Dog.name
+
+    #my_test
+    assert_equal true, Dog.is_a?(Object)
   end
 
   # ------------------------------------------------------------------

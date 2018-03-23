@@ -9,6 +9,14 @@ class AboutObjects < Neo::Koan
     assert_equal true, Object.is_a?(Object)
   end
 
+#My_test
+   def test_everything_is_an_Object
+    assert_equal true, Float.is_a?(Object)
+    assert_equal true, -1.is_a?(Object)
+    assert_equal true, -1.2.is_a?(Object)
+    assert_equal true, Array.new(10) { |i|  }.is_a?(Object)
+   end
+
   def test_objects_can_be_converted_to_strings
     assert_equal "123", 123.to_s
     assert_equal "", nil.to_s
@@ -36,6 +44,9 @@ class AboutObjects < Neo::Koan
     assert_equal 5, 2.object_id
     assert_equal 201, 100.object_id
 
+    #My_test
+    assert_equal 421, 210.object_id
+    assert_equal -3, -2.object_id
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
   end

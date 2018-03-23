@@ -54,6 +54,10 @@ class AboutModules < Neo::Koan
     assert_equal "Fido", fido.name
     fido.set_name("Rover")
     assert_equal "Rover", fido.name
+
+    #My_test
+    fido.set_name("Jastic")
+    assert_equal "Jastic", fido.name
   end
 
   def test_classes_can_override_module_methods

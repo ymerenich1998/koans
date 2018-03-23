@@ -43,6 +43,13 @@ class AboutBlocks < Neo::Koan
     assert_equal [:peanut, :butter, :and, :jelly], result
   end
 
+#My_Test
+def test_methods_can_call_yield_0_2_times
+    result = []
+    many_yields { |item| result << item[0..2] }
+    assert_equal ["pea", "but", "and", "jel"], result
+  end
+
   # ------------------------------------------------------------------
 
   def yield_tester
@@ -56,6 +63,9 @@ class AboutBlocks < Neo::Koan
   def test_methods_can_see_if_they_have_been_called_with_a_block
     assert_equal :with_block, yield_tester { :with_block }
     assert_equal :no_block, yield_tester
+
+    #My_test
+    assert_equal :add_block, yield_tester {:add_block}
   end
 
   # ------------------------------------------------------------------
@@ -92,5 +102,8 @@ class AboutBlocks < Neo::Koan
     add_one = lambda { |n| n + 1 }
     assert_equal 11, method_with_explicit_block(&add_one)
   end
+
+
+
 
 end

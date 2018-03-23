@@ -21,4 +21,12 @@ class AboutTriangleProject < Neo::Koan
     assert_equal :scalene, triangle(10, 11, 12)
     assert_equal :scalene, triangle(5, 4, 2)
   end
+
+
+#My_test
+  def test_all_tringles
+    assert_equal :scalene, triangle(121, 122, 123)
+    assert_equal :equilateral, triangle(4, 4, 4)
+    assert_equal :isosceles, triangle(3, 2, 3)
+  end
 end

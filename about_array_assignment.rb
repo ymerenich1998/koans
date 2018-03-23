@@ -16,6 +16,11 @@ class AboutArrayAssignment < Neo::Koan
     first_name, last_name = ["John", "Smith", "III"]
     assert_equal "John", first_name
     assert_equal "Smith", last_name
+
+    # my test
+    name1 , name2 = last_name
+    assert_equal "Smith", name1
+    assert_equal nil, name2
   end
 
   def test_parallel_assignments_with_splat_operator
