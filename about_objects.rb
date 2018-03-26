@@ -9,7 +9,7 @@ class AboutObjects < Neo::Koan
     assert_equal true, Object.is_a?(Object)
   end
 
-#My_test
+#Test 6
    def test_everything_is_an_Object
     assert_equal true, Float.is_a?(Object)
     assert_equal true, -1.is_a?(Object)
@@ -44,7 +44,7 @@ class AboutObjects < Neo::Koan
     assert_equal 5, 2.object_id
     assert_equal 201, 100.object_id
 
-    #My_test
+    #Test 8
     assert_equal 421, 210.object_id
     assert_equal -3, -2.object_id
     # THINK ABOUT IT:

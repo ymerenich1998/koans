@@ -5,11 +5,16 @@ class AboutOpenClasses < Neo::Koan
     def bark
       "WOOF"
     end
+    #Test 9
+    def num_of_tails
+     1
+     end
   end
 
   def test_as_defined_dogs_do_bark
     fido = Dog.new
     assert_equal "WOOF", fido.bark
+    assert_equal 1, fido.num_of_tails
   end
 
   # ------------------------------------------------------------------

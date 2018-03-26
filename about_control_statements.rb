@@ -139,4 +139,16 @@ class AboutControlStatements < Neo::Koan
     assert_equal 10, sum
   end
 
+    #TEST_1 —> def test_break_if_statement
+  def test_break_if_statement
+    i=12;
+    result=[];
+    while true
+      break if i>30
+      result<<i if i%2==1
+      i+=1
+    end
+    assert_equal [13, 15, 17, 19, 21, 23, 25, 27, 29],result
+
+     end
 end

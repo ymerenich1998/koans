@@ -73,7 +73,7 @@ class AboutClasses < Neo::Koan
   end
 
 
-#My_test
+#Test 5
   def test_you_can_create_accessor_methods_to_return_instance_variables2
     fido = Dog3.new
     fido.set_name("Kevin")

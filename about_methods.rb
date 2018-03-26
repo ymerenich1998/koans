@@ -148,4 +148,36 @@ class AboutMethods < Neo::Koan
       rover.tail
     end
   end
+
+
+#Test 8
+  class Dragon
+     def name
+       "Keron"
+     end
+       private
+ 
+     def pravode
+       "pravode"
+     end
+   end
+   #
+ 
+   def test_calling_methods_in_other_objects_require_explicit_receiver
+     mode = Dragon.new
+     assert_equal "Keron", mode.name
+ 
+   end
+ 
+  def test_calling_private_methods_in_other_objects 
+     mode = Dragon.new
+     assert_raise(NoMethodError) do
+       mode.pravode
+   end
+  end
+ 
+ 
+
+
+
 end
